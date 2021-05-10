@@ -1,38 +1,95 @@
 .App {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0%;
+  padding: 0%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  flex: 30%;
+  background-color: tomato;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header .inputContainer {
   display: flex;
   flex-direction: column;
+}
+
+.header input {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+}
+
+.header button {
+  width: 70px;
+  height: 45px;
+  border: none;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.todoList {
+  flex: 70%;
+  width: 100%;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 50px;
+  flex-direction: column;
+}
+
+.task {
+  width: 500px;
+  height: 50px;
+  display: flex;
   color: white;
+  margin: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.task .content {
+  flex: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task .content span {
+  display: grid;
+  place-items: center;
+  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  border-right: none;
+  background-color: tomato;
+}
+
+.task button {
+  flex: 20%;
+  height: 100%;
+  border: none;
+  background-color: lightseagreen;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: white;
+  cursor: pointer;
 }
